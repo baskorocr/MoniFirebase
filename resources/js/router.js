@@ -1,15 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
-import ListDevices from "@/Pages/Device/List.vue";
-import MonitoringDevice from "@/Pages/Device/Monitoring.vue";
+import ListDevices from "../Pages/Device/List.vue";
+import MonitoringDevice from "../Pages/Device/Monitoring.vue";
 
 const routes = [
     { 
         path: "/devices", 
-        component: ListDevices
+        component: ListDevices,
+        name: "devices.list"
     },
     {
         path: "/devices/monitoring/:id",
-        name: "monitoring",
+        name: "devices.monitoring",
         component: MonitoringDevice
     },
 ];
