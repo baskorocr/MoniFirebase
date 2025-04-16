@@ -1,13 +1,15 @@
 import { createRouter, createWebHistory } from "vue-router";
-import ListDevices from "@/Pages/Device/List.vue";
-import MonitoringDevice from "@/Pages/Device/Monitoring.vue";
+import { resolvePageComponent } from '@inertiajs/vue3';
 
 const routes = [
-    { path: "/devices", component: ListDevices },
+    { 
+        path: "/devices", 
+        component: () => resolvePageComponent('./Pages/Device/List.vue', import.meta.glob('./Pages/Device/List.vue'))
+    },
     {
         path: "/devices/monitoring/:id",
         name: "monitoring",
-        component: MonitoringDevice,
+        component: () => resolvePageComponent('./Pages/Device/Monitoring.vue', import.meta.glob('./Pages/Device/Monitoring.vue'))
     },
 ];
 
