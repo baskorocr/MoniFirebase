@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-import ListDevices from "@/Pages/device/list.vue";
-import MonitoringDevice from "@/Pages/device/monitoring.vue";
+import ListDevices from "@/Pages/Device/List.vue";
+import MonitoringDevice from "@/Pages/Device/Monitoring.vue";
 
 const routes = [
     { path: "/devices", component: ListDevices },
